@@ -7,6 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, precision_score
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import SMOTE
+from faker import Faker
 
 data = pd.read_csv('creditcard_2023.csv')
 #scales data set using scaler
@@ -46,3 +47,25 @@ print("Precision:", precision)
 import joblib 
 joblib.dump(model, 'credit_fraud_model.pk1')
 
+
+
+fake = Faker()
+
+def generate_bank_data(num_records=1000):
+    data = {
+        'account_id': np.random.randint(1000, 9999, num_records),
+        'user_id': np.random.randint(1, 100, num_records),
+        'transaction_id': np.random.randint(1000000, 9999999, num_records),
+        'transaction_amount': np.round(np.random.uniform(10, 2000, num_records), 2),
+        'transaction_time': [fake.date_time_this_year() for _ in range(num_records)],
+        'merchant_category': np.random.choice(['groceries', 'electronics', 'clothing', 'dining'], num_records),
+        'location': [fake.city() for _ in range(num_records)],
+        'device_id': [fake.uuid4() for _ in range(num_records)],
+        'ip_address': [fake.ipv4() for _ in range(num_records)],
+        'is_fraud': np.random.choice([0, 1], p=[0.97, 0.03], size=num_records)  # 3% fraud
+    }
+    return pd.DataFrame(data)
+
+# Generate the data
+bank_data = generate_bank_data(1000)
+bank_data.head()
