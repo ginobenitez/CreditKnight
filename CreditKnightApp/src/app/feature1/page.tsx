@@ -31,7 +31,7 @@ export default async function Feature() {
       {renderNavButtons()}
 
       <div className="card hero ">
-        <h1>Fradulant Activity</h1>
+        <h1 style={{ marginTop: '1.3%'}}>Fradulant Activity</h1>
           <div className = "flex-row">
           {/* Smaller Box */}
           <div className="small-box" style={{ backgroundColor: '#b8860b', color: 'white' }}>

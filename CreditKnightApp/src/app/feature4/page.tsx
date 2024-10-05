@@ -30,7 +30,7 @@ export default async function Feature() {
       {renderNavButtons()}
 
       <div className="card hero">
-        <h1>FAQ</h1>        
+        <h1 style={{marginBottom: '5%'}}>FAQ</h1>        
         {/* Smaller Box */}
         <div className="small-box"  style={{ backgroundColor: '#b8860b', color: 'white' }}>
           <p>(Qs and As)</p>

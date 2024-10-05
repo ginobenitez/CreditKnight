@@ -25,7 +25,9 @@ export default async function RootLayout({
       <body>
         <header>
           <nav className="nav container">
-            <h1 className="text-display-3">CreditKnight</h1>
+            <Link href="/dashboard">
+            <h1 className="text-display-3" style={{cursor: 'pointer'}}>CreditKnight</h1>
+            </Link>
             <div>
               {!(await isAuthenticated()) ? (
                 <>
