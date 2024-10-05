@@ -4,12 +4,11 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 const features = [
   { href: '/dashboard', label: 'Dashboard' },
-  { href: '/feature1', label: 'Feature 1' },
-  { href: '/feature2', label: 'Feature 2' },
-  { href: '/feature3', label: 'Feature 3' },
-  { href: '/feature4', label: 'Feature 4' },
+  { href: '/feature1', label: 'Fraudulant Activity' },
+  { href: '/feature2', label: 'Transactions' },
+  { href: '/feature3', label: 'View Subscriptions' },
+  { href: '/feature4', label: 'FAQs' },
 ];
-
 const renderNavButtons = () => (
   <div className="nav-buttons-container">
     {features.map((feature) => (
@@ -31,12 +30,10 @@ export default async function Feature() {
       {renderNavButtons()}
 
       <div className="card hero">
-        <h1>FAQ</h1>
-        <p>Currently a work in progress. Apologies for the inconvenience.</p>
-        
+        <h1>FAQ</h1>        
         {/* Smaller Box */}
         <div className="small-box"  style={{ backgroundColor: '#b8860b', color: 'white' }}>
-          <p>your questions will be answered! ^_^  (example)</p>
+          <p>(Qs and As)</p>
         </div>
       </div>
       <section className="next-steps-section">

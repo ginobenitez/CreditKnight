@@ -147,6 +147,12 @@ a {
 .nav-button:hover {
   background-color: #b8860b;
 }
+
+.box-container {
+  display: flex;
+  gap: 20px; 
+}
+
 .sign-in-btn {
   margin-right: var(--g-spacing-small);
 }
@@ -179,6 +185,9 @@ a {
 }
 
 .hero {
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -257,9 +266,19 @@ a {
   border-radius: var(--g-border-radius-large); 
   box-shadow: var(--g-box-shadow); 
   color: var(--g-color-red); 
-  width: 780px; 
-  height: 300px; 
+  width: 45%; 
+  height: 75%; 
   border: 1px solid #ccc; 
   padding: 10px; 
-  margin-top: 20px; 
+  align-items: center;
+}
+
+.flex-row
+{
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  align-items: center;
+  width: 75%;
+  height: 95%;
 }
