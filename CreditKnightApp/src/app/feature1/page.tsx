@@ -4,10 +4,10 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 const features = [
   { href: '/dashboard', label: 'Dashboard' },
-  { href: '/feature1', label: 'Feature 1' },
-  { href: '/feature2', label: 'Feature 2' },
-  { href: '/feature3', label: 'Feature 3' },
-  { href: '/feature4', label: 'Feature 4' },
+  { href: '/feature1', label: 'Fraudulant Activity' },
+  { href: '/feature2', label: 'Transactions' },
+  { href: '/feature3', label: 'View Subscriptions' },
+  { href: '/feature4', label: 'FAQs' },
 ];
 
 const renderNavButtons = () => (
@@ -31,13 +31,16 @@ export default async function Feature() {
       {renderNavButtons()}
 
       <div className="card hero ">
-        <h1>This is the page for feature 1.</h1>
-        <p>Currently a work in progress. Apologies for the inconvenience.</p>
-        
-        {/* Smaller Box */}
-        <div className="small-box" style={{ backgroundColor: '#b8860b', color: 'white' }}>
-          <p>FRADUWATCH (example)</p>
-        </div>
+        <h1>Fradulant Activity</h1>
+          <div className = "flex-row">
+          {/* Smaller Box */}
+          <div className="small-box" style={{ backgroundColor: '#b8860b', color: 'white' }}>
+            <p>(Display Fradulant History and Current Fradulant Activity)</p>
+          </div>
+          <div className="small-box" style={{ backgroundColor: '#b8860b', color: 'white' }}>
+            <p>(Additional Information)</p>
+          </div>
+        </div>          
       </div>
       <section className="next-steps-section">
         <h2 className="text-heading-1">Next steps for you</h2>
