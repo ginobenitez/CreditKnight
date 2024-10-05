@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 const features = [
+  { href: '/dashboard', label: 'Dashboard' },
   { href: '/feature1', label: 'Feature 1' },
   { href: '/feature2', label: 'Feature 2' },
   { href: '/feature3', label: 'Feature 3' },
