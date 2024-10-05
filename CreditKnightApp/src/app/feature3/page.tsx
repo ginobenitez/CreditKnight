@@ -7,6 +7,7 @@ const features = [
   { href: '/feature1', label: 'Feature 1' },
   { href: '/feature2', label: 'Feature 2' },
   { href: '/feature3', label: 'Feature 3' },
+  { href: '/feature4', label: 'Feature 4' },
 ];
 
 const renderNavButtons = () => (
