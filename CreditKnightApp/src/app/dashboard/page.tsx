@@ -36,19 +36,19 @@ export default function Dashboard() {
         <h2 className={styles.userName}>{userName}</h2>
       </header>
       <div className={styles.cards}>
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => handleCardClick('/feature1')}>
           <h3>Feature 1</h3>
           <p>Description for feature 1</p>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => handleCardClick('/feature2')}>
           <h3>Feature 2</h3>
           <p>Description for feature 2</p>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => handleCardClick('/feature3')}>
           <h3>Feature 3</h3>
           <p>Description for feature 3</p>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => handleCardClick('/feature4')}>
           <h3>Feature 4</h3>
           <p>Description for feature 4</p>
         </div>
