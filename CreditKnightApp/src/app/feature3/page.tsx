@@ -19,6 +19,9 @@ export default async function Feature() {
         <Link href="/feature3">
           <button style={{ margin: '0 10px' }}>Feature 3</button>
         </Link>
+        <Link href="/dashboard">
+          <button style={{ margin: '0 10px' }}>Dashboard</button>
+        </Link>
       </div>
         <div className="card hero">
           <h1>This is the page for feature 3.</h1>
