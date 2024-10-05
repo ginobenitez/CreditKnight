@@ -1,23 +1,58 @@
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+"use client";
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import styles from './cards.module.css';
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
-export default async function Dashboard() {
+export default function Dashboard() {
+  const router = useRouter();
+  const [userName, setUserName] = useState('Guest'); // State to hold user name
+  const kindeClient = useKindeBrowserClient(); // Initialize the Kinde client
 
-  const {getUser } = getKindeServerSession();
-  const user = await getUser();
-  console.log(user);
+  // useEffect to fetch user data when the component mounts
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const user = await kindeClient.getUser(); // Fetch user data
+        console.log(user); // Log user data
+        setUserName(user?.given_name || 'Guest'); // Safely set the user's given name
+      } catch (error) {
+        console.error("Failed to fetch user data:", error);
+      }
+    };
+
+    fetchUser(); // Call the fetchUser function
+  }, [kindeClient]); // Dependency array to run effect when the client changes
+
+  // Function to handle card clicks
+  const handleCardClick = (page: string) => {
+    router.push(page); // Navigate to the specified page
+  };
+
   return (
-    <div className="container">
-      <div className="card start-hero">
-        <p className=" text-pink-500" >Woohoo! {user.given_name}</p>
-        <p className="text-display-2">
-          Your authentication is all sorted.
-          <br />
-          Build the important stuff.
-        </p>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.appName}>CreditKnight</h1>
+        <h2 className={styles.userName}>{userName}</h2>
+      </header>
+      <div className={styles.cards}>
+        <div className={styles.card}>
+          <h3>Feature 1</h3>
+          <p>Description for feature 1</p>
+        </div>
+        <div className={styles.card}>
+          <h3>Feature 2</h3>
+          <p>Description for feature 2</p>
+        </div>
+        <div className={styles.card}>
+          <h3>Feature 3</h3>
+          <p>Description for feature 3</p>
+        </div>
+        <div className={styles.card}>
+          <h3>Feature 4</h3>
+          <p>Description for feature 4</p>
+        </div>
       </div>
-      <section className="next-steps-section">
-        <h2 className="text-heading-1">Next steps for you</h2>
-      </section>
     </div>
   );
 }

@@ -1,0 +1,46 @@
+/* pages/cards.module.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20;
+    background-color: rgb(0, 0, 139);
+    color: rgb(0, 0, 0);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .appName {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .userName {
+    font-size: 20px;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    background: #008080;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: 10px;
+    width: 200px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
