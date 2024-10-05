@@ -124,6 +124,29 @@ a {
   width: 100%;
 }
 
+/* globals.css */
+
+
+.nav-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adds space between buttons */
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #b8860b;
+}
 .sign-in-btn {
   margin-right: var(--g-spacing-small);
 }
