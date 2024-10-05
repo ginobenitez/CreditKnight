@@ -36,22 +36,22 @@ export default function Dashboard() {
       <div className={styles.cards}>
       <div className={styles.cardGroup}>
         <div className={styles.card} onClick={() => handleCardClick('/feature1')}>
-          <h3>Feature 1</h3>
-          <p>Description for feature 1</p>
+          <h3>FRAUD WATCH</h3>
+          <p>View any suspicious activity on your account</p>
         </div>
         <div className={styles.card} onClick={() => handleCardClick('/feature3')}>
-          <h3>Feature 3</h3>
-          <p>Description for feature 3</p>
+          <h3>SUBSCRIPTIONS</h3>
+          <p>View your recurrent transactions and subscriptions</p>
         </div>
       </div>
       <div className={styles.cardGroup} onClick={() => handleCardClick('/feature2')}>  
         <div className={styles.card}>
-          <h3>Feature 2</h3>
-          <p>Description for feature 2</p>
+          <h3>TRANSACTION HISTORY</h3>
+          <p>View all transactions</p>
         </div>
         <div className={styles.card} onClick={() => handleCardClick('/feature4')}>
-          <h3>Feature 4</h3>
-          <p>Description for feature 4</p>
+          <h3>FAQs</h3>
+          <p>Frequently asked questions and hybrid chat bot</p>
         </div>
       </div>
       </div>

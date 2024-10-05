@@ -26,6 +26,7 @@ export default async function RootLayout({
         <header>
           <nav className="nav container">
             <h1 className="text-display-3">CreditKnight</h1>
+            <img src="/shield-svgrepo-com.svg" alt="shield Icon" style={{ width: '24px', height: '24px', marginRight: '8px' }} />
             <div>
               {!(await isAuthenticated()) ? (
                 <>

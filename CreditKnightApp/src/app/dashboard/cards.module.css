@@ -56,12 +56,14 @@
   }
   
   .card h3 {
-    color: white; /* Ensured text is readable */
+    color: black; /* Ensured text is readable */
     margin-bottom: 10px; /* Space below the title */
+    margin-top: 5px;
   }
   
   .card p {
     color: #f0f0f0; /* Lighter text for description */
+    margin-top: 45px;
   }
 
   .cardGroup{
