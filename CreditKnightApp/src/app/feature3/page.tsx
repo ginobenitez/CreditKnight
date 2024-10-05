@@ -22,7 +22,7 @@ export default async function Feature() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
   console.log(user);
-
+  
   return (
     <div className="container">
       {/* Navigation Buttons */}

@@ -1,0 +1,71 @@
+/* pages/cards.module.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 65px; /* Corrected padding to have units */
+    background-color: rgb(0, 0, 139); /* Navy */
+    color: white; /* Set text color to white for better contrast */
+    border-radius: 8px; /* Rounded corners for the container */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; /* Increased space below the header */
+    padding: 3px 0;
+  }
+  
+  .appName {
+    font-size: 28px; /* Increased font size */
+    font-weight: bold;
+    color: #008080; /* Teal color for the app name */
+    margin: 0;
+  }
+  
+  .userName {
+    font-size: 22px; /* Increased font size */
+    color: #00CED1; /* Light Teal color for user name */
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+  }
+  
+  .card {
+    background: #008080; /* Teal */
+    width: 300px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; /* Added box-shadow transition */
+    margin: 40px; /* Increased margin for spacing */
+    margin-top: 75px;
+    margin-right: 50px;
+    margin-left: 50px;
+    height: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  }
+  
+  .card h3 {
+    color: white; /* Ensured text is readable */
+    margin-bottom: 10px; /* Space below the title */
+  }
+  
+  .card p {
+    color: #f0f0f0; /* Lighter text for description */
+  }
+
+  .cardGroup{
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  

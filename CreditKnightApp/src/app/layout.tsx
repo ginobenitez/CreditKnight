@@ -66,16 +66,9 @@ export default async function RootLayout({
           </main>
         <footer className="footer">
           <div className="container">
-            <strong className="text-heading-2">KindeAuth</strong>
-            <p className="footer-tagline text-body-3">
-              Visit our{" "}
-              <Link className="link" href="https://kinde.com/docs">
-                help center
-              </Link>
-            </p>
-
-            <small className="text-subtle">
-              © 2023 KindeAuth, Inc. All rights reserved
+            <strong className="text-heading-2">CreditKnight</strong>
+            <small className="text-subtle"> 
+              <div> © 2024 CreditKnight, Inc. All rights reserved</div>
             </small>
           </div>
         </footer>
