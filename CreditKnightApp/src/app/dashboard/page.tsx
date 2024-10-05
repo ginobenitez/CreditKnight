@@ -3,8 +3,9 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './cards.module.css';
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
-
+//import {useTranslation} from 'next-i18next';
 export default function Dashboard() {
+  //const { t } = useTranslation('translation');
   const router = useRouter();
   const [userName, setUserName] = useState('Guest'); // State to hold user name
   const kindeClient = useKindeBrowserClient(); // Initialize the Kinde client
@@ -30,28 +31,28 @@ export default function Dashboard() {
   };
 
   return (
-    <div className={styles.container}>
-      <h1>{userName}'s Dashboard</h1>
+    <div className={styles.container} style={{backgroundColor: 'black', color: 'white'}}>
+      <h1>{userName}'s {('Dashboard')}</h1>
     
       <div className={styles.cards}>
       <div className={styles.cardGroup}>
-        <div className={styles.card}>
-          <h3>Feature 1</h3>
-          <p>Description for feature 1</p>
+        <div className={styles.card} onClick={() => handleCardClick('/feature1')} style={{ backgroundColor: '#b8860b', color: 'white' }}>
+          <h3>{('FRAUD WATCH')}</h3>
+          <p>{('View any suspicious activity on your account')}</p>
         </div>
-        <div className={styles.card}>
-          <h3>Feature 3</h3>
-          <p>Description for feature 3</p>
+        <div className={styles.card} onClick={() => handleCardClick('/feature3')} style={{ backgroundColor: '#b8860b', color: 'white' }}>
+          <h3>{('SUBSCRIPTIONS')}</h3>
+          <p>{('View your recurrent transactions and subscriptions')}</p>
         </div>
       </div>
-      <div className={styles.cardGroup}>  
-        <div className={styles.card}>
-          <h3>Feature 2</h3>
-          <p>Description for feature 2</p>
+      <div className={styles.cardGroup} onClick={() => handleCardClick('/feature2')} >  
+        <div className={styles.card} style={{ backgroundColor: '#b8860b', color: 'white' }}> 
+          <h3>{('TRANSACTION HISTORY')}</h3>
+          <p>{('View all transactions')}</p>
         </div>
-        <div className={styles.card}>
-          <h3>Feature 4</h3>
-          <p>Description for feature 4</p>
+        <div className={styles.card} onClick={() => handleCardClick('/feature4')} style={{ backgroundColor: '#b8860b', color: 'white' }}>
+          <h3>{('FAQs')}</h3>
+          <p>{('Frequently asked questions and hybrid chat bot')}</p>
         </div>
       </div>
       </div>
